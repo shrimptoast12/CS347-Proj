@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0D945EC8-A923-F323-2896-630A01B1E5E4" name="VDK_Wishlist">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>5F343F70-43E1-5432-1AAD-164BD371C752</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="list_id" id="5DF23740-FBE5-39E3-C5F7-1EFEF0E36D4C">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>1907AC26-720E-09CF-4F43-58D2402705B6</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="amount_in_cart" id="EECA20F3-31DC-65CB-1395-3D56C5B9E21E">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>C284DF7A-3042-2ED8-1CBA-4F2447183205</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VDK_Customer_customer_id" id="61AB18C8-F50A-6E58-89FF-2AC376F52973">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>1345D755-62F1-BDC6-EFB6-9073E96EC0D7</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EBDD6CE5-4D93-930E-4DF2-261D785F096B" referredColumn="8A267643-A5FB-3A04-9319-4742BEA95A02"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AF2BC466-5B20-0AAF-F27A-05ACCE9889D5" name="VDK_Wishlist_PK">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>98CD20AC-1BBA-B755-2107-0F0AFA3AC207</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DF23740-FBE5-39E3-C5F7-1EFEF0E36D4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9EA5D9D-E5D8-AB2A-BC84-33C768F037F8" name="VDK_Wishlist__IDX">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>3D6D8BD3-ECCC-DE5B-5FF1-583140F2CBC8</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="61AB18C8-F50A-6E58-89FF-2AC376F52973"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="67F70E36-5ECE-527F-0174-8D9F86A05AA3" name="VDK_Wishlist_VDK_Customer_FK">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-22 02:39:22 UTC</createdTime>
+<generatorID>3D6D8BD3-ECCC-DE5B-5FF1-583140F2CBC8</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61AB18C8-F50A-6E58-89FF-2AC376F52973"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

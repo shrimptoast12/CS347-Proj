@@ -1,0 +1,109 @@
+drop view VDK_deliveryAdmin_view ;
+drop view VDK_manager_view ;
+drop view VDK_customerSupport_view ;
+
+
+create view VDK_deliveryAdmin_view as
+SELECT 
+    employee_id,
+    type,
+    job,
+    name,
+    email_address,
+    address,
+    phone_number
+FROM VDK_employee where job = 'Delviery Admin' ;
+
+create or replace TRIGGER VDK_deliveryAdmin_trigger
+     INSTEAD OF insert ON VDK_deliveryAdmin_view
+     FOR EACH ROW
+BEGIN
+    insert into VDK_employee( 
+    employee_id,
+    type,
+    job,
+    name,
+    email_address,
+    address,
+    phone_number)
+		 VALUES ( 
+		:NEW.employee_id,
+    'Delivery Admin',
+		'Delivery Admin',
+		:NEW.name,
+    :NEW.email_address,
+    :NEW.address,
+    :NEW.phone_number) ;
+END;
+/
+
+create view VDK_manager_view as
+SELECT 
+    employee_id,
+    type,
+    job,
+    name,
+    email_address,
+    address,
+    phone_number
+FROM VDK_employee where job = 'Manager' ;
+
+create or replace TRIGGER VDK_manager_trigger
+     INSTEAD OF insert ON VDK_manager_view
+     FOR EACH ROW
+BEGIN
+    insert into VDK_employee( 
+    employee_id,
+    type,
+    job,
+    name,
+    email_address,
+    address,
+    phone_number)
+		 VALUES ( 
+		:NEW.employee_id,
+    'Manager',
+		'Manager',
+        :NEW.name,
+        :NEW.email_address,
+        :NEW.address,
+		:NEW.phone_number) ;
+END;
+/
+
+create view VDK_customerSupport_view as
+SELECT 
+    employee_id,
+    type,
+    job,
+    name,
+    email_address,
+    address,
+    phone_number
+FROM VDK_employee where job = 'Customer Support' ;
+
+create or replace TRIGGER VDK_customerSupport_trigger
+     INSTEAD OF insert ON VDK_customerSupport_view
+     FOR EACH ROW
+BEGIN
+    insert into VDK_employee( 
+		employee_id,
+    type,
+		job,
+        name,
+        email_address,
+		address,
+    phone_number)
+		 VALUES ( 
+		:NEW.employee_id,
+    'Customer Support',
+		'Customer Support',
+        :NEW.name,
+        :NEW.email_address,
+		:NEW.address,
+		:NEW.phone_number) ;
+END;
+/
+
+
+

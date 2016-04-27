@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="customer_acc" directorySegmentName="seg_0" id="5C2398BB-84C4-4606-E1B3-9A1303E26DA5">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:10:55 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<sourcePk>6B72DAE1-99EC-CB4B-A653-32BFF151BC3E</sourcePk>
+<targetPk>DA6C26CB-26D5-9D77-8E19-D4957F25D74A</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DC6A58D6-2AD6-2DC2-D541-5572BDFD0D73</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>F9587B5F-9733-341F-CFDD-04CBC89C898C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,178 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8B2CD74F-6A7F-4110-0BF3-3F7B5D5F6216" name="VDK_Customer">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>DC6A58D6-2AD6-2DC2-D541-5572BDFD0D73</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="customer_id" id="8A267643-A5FB-3A04-9319-4742BEA95A02">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>B38DA0F1-E8F3-53AB-CC49-4044C292677C</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="960AD577-ADFD-EDDF-CD0C-41EB1A5B2E1C">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>497A5226-885C-F199-A91C-D19444E961B4</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email_address" id="A1A28813-D33C-A22E-EAEA-CB5DD9E6A373">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>06ABDCAB-C1AA-53ED-8805-FA8EC16B6465</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="credit_card_num" id="6361B59C-57CE-460B-AB91-146506AD7734">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>1C34C5E5-C24D-9D06-A88E-9C9DC2D3805D</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="722BA530-3081-5C61-7CEC-FE9B4ED9089B">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>FCF4E179-9F56-C7F2-D5EF-FAB578B94587</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone_number" id="E5081063-A919-E6B0-082D-B12600167EFF">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>4571E07C-1A9F-EEAD-7C0C-E2939E7DB37B</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VDK_Account_account_id" id="2B6EE456-ECC7-D41A-FE1A-F8E93E6454ED">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>505617EA-1371-7C45-16C8-07A2A6013D1F</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="17F8B958-8AB1-C840-232A-39CDE320E522" referredColumn="F871736D-3CD6-6ADA-B768-D13419D44CF9"/>
+</associations>
+</Column>
+<Column name="VDK_Wishlist_list_id" id="4CE1B72A-FF3E-1D85-5A20-3F02FEA9A65C">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>7F675F23-3963-AE17-A7C5-B08AD3820C38</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="92C21DC3-D1A4-FD8F-E00D-83081393E359" referredColumn="5DF23740-FBE5-39E3-C5F7-1EFEF0E36D4C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="387E476D-7F63-D9D0-BC18-C1E1673E377F" name="VDK_Customer_PK">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>6B72DAE1-99EC-CB4B-A653-32BFF151BC3E</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A267643-A5FB-3A04-9319-4742BEA95A02"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F600E3FA-2ADF-8F62-2C90-A7B6C5B35B02" name="VDK_Customer__IDX">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>5C2398BB-84C4-4606-E1B3-9A1303E26DA5</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="2B6EE456-ECC7-D41A-FE1A-F8E93E6454ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71F1E857-891F-90FA-2CDB-EDDADEFB2210" name="VDK_Customer__IDXv1">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>3D6D8BD3-ECCC-DE5B-5FF1-583140F2CBC8</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="4CE1B72A-FF3E-1D85-5A20-3F02FEA9A65C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5ECA256-E22E-A792-0693-8A995F5CE318" name="VDK_Customer_VDK_Wishlist_FK">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-22 02:39:22 UTC</createdTime>
+<generatorID>3D6D8BD3-ECCC-DE5B-5FF1-583140F2CBC8</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CE1B72A-FF3E-1D85-5A20-3F02FEA9A65C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CBAE22D8-C749-A208-089E-2758FA05EAEB" name="VDK_Customer_VDK_Account_FK">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-27 18:39:27 UTC</createdTime>
+<generatorID>5C2398BB-84C4-4606-E1B3-9A1303E26DA5</generatorID>
+<ownerDesignName>shoe_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B6EE456-ECC7-D41A-FE1A-F8E93E6454ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

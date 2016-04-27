@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="256B0D32-5FE4-5630-74AF-5C25F997B9C3" name="Shoe">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 19:05:05 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="shoe_id" id="7E05E835-4151-B281-477C-64B40AAD48E6">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 19:06:04 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="size" id="9538028D-964A-1A9E-5A88-1062A30DF1E4">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 19:10:30 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="color" id="0910CDC3-BDF2-FCBD-7C48-336AAAE804DA">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 19:10:57 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pattern_id" id="7EF9771C-0167-D09E-8533-2533B65DC8F7">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 19:14:03 UTC</createdTime>
+<generatorID>9BEC7532-88C3-2094-AAB1-D6CE2FE0074C</generatorID>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>19391B93-5B45-7151-6A8C-00043B801459</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="style" id="AECAD248-6FF8-557B-8B3E-06FA92A08287">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 20:08:18 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="price" id="26FAF03D-94B4-9E39-13DB-3D1C137D65D8">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 20:11:51 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="shoelace_color" id="445550BB-0D3C-1607-51E2-0C507B2EF752">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-24 20:13:57 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E79FF2DC-740A-5F3F-03B5-2FEA4CE90F3C" name="Shoe PK">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 19:06:14 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7E05E835-4151-B281-477C-64B40AAD48E6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

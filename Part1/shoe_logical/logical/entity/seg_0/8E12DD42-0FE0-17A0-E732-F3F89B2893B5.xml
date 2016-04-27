@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8E12DD42-0FE0-17A0-E732-F3F89B2893B5" name="VDK_History">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:30:53 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="history_id" id="A5BA5B82-C5E4-9381-2ECC-BEABDD115117">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:31:06 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date" id="323EA4A3-47D2-7499-A167-8E086FD09D42">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:31:18 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status" id="B138986D-F97B-9D43-2C83-71CD181B53FB">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:35:45 UTC</createdTime>
+<generatorID>A4EC6546-FF2A-57DC-9951-446CCD8AF273</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<referedAttribute>22D75925-C2F6-1C59-F94D-FDC14E93EDE5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="employee_id" id="9DF78CDF-E54A-C17A-6419-6AB25EEA0224">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:36:05 UTC</createdTime>
+<generatorID>499E9BAB-B7B2-C105-5F77-05909E06138B</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<referedAttribute>59532B43-C177-65FE-3476-F389D3A5B430</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_id" id="F9A9566A-A062-A5C7-BBBF-E0D3EE940288">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:36:23 UTC</createdTime>
+<generatorID>5DE8E118-38A9-7B76-C881-51074ACD8D7D</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<referedAttribute>3EDE0AB1-3BAF-373B-B698-DA3C2CC6E417</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5E1EC275-033B-A366-4752-17537F0D9A29" name="VDK_History PK">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:31:17 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A5BA5B82-C5E4-9381-2ECC-BEABDD115117</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="shoe_logo" directorySegmentName="seg_0" id="AB75DE38-EEA4-B2B2-26A5-AE934DBDE9D8">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-24 20:06:42 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<sourcePk>E79FF2DC-740A-5F3F-03B5-2FEA4CE90F3C</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>256B0D32-5FE4-5630-74AF-5C25F997B9C3</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>8261AE5F-1625-486A-F450-0CC8A84707A4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A31CF488-E2F0-BFEB-25BA-5E56F28B94EA" name="VDK_Complaint">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:04:21 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="complaint_id" id="BA719F32-6D1A-146E-E190-DAB8858BF9CB">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:04:27 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comments" id="05C654BD-F408-30AB-6DBA-7F5A9D51B5B3">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:04:46 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="employee_id" id="FF2A51CD-D191-5F91-4F85-3311EE146C94">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:11:41 UTC</createdTime>
+<generatorID>B241D46C-2D3D-6788-6CD4-C7B78650F157</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<referedAttribute>59532B43-C177-65FE-3476-F389D3A5B430</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="customer_id" id="5BCD02EF-5BF7-E73D-47FB-E3D51808F4AA">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:12:02 UTC</createdTime>
+<generatorID>53BD1F34-A036-EC1D-97C5-30F5E3B66A96</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<referedAttribute>B38DA0F1-E8F3-53AB-CC49-4044C292677C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_id" id="E6924EA8-E305-75BC-E93A-D86A03951D3A">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:12:22 UTC</createdTime>
+<generatorID>99EBBA0B-770B-E7FA-1992-55299791FC75</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>3EDE0AB1-3BAF-373B-B698-DA3C2CC6E417</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CE80A6C3-2A85-CB35-3D9D-612A7052FA26" name="VDK_Complaint PK">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:04:39 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="ED8EE9A4-7959-5A51-5707-7906DF17316E" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BA719F32-6D1A-146E-E190-DAB8858BF9CB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

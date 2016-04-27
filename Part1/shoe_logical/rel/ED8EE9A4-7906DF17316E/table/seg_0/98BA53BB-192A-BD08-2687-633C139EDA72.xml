@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="98BA53BB-192A-BD08-2687-633C139EDA72" name="VDK_Pattern">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>CC70FE41-6114-D440-3647-9868CE9AEA59</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pattern_id" id="E3282589-DED1-E7A5-E1A0-724E6D756F7F">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>C44F348E-E195-1BB8-D33A-056DABE99EF4</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pattern_name" id="63B3B761-A70B-BE33-8A49-DC89B81C9960">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>264B2971-03FE-DD36-6D97-7F1727E7BD0B</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pattern_look" id="A4FC64CE-188D-BDBC-22A1-1BA22ADA3DCE">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>4819F8AE-BCA8-67D2-3DC6-ED9E726D78CF</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="61ADE8B4-1F7A-B75F-E684-45458DC1703B" name="VDK_Pattern_PK">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>13897A5C-09E1-45C6-7D33-C6302F07F1BE</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3282589-DED1-E7A5-E1A0-724E6D756F7F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

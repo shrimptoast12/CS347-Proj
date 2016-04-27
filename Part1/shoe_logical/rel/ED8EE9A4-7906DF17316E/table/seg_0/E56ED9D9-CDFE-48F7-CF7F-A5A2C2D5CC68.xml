@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E56ED9D9-CDFE-48F7-CF7F-A5A2C2D5CC68" name="VDK_Status">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:37:12 UTC</createdTime>
+<generatorID>049C84DD-8B79-C48D-DA27-3C079AEBEC3A</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="status" id="E602D053-C7E4-713B-59BE-8D82246CF22B">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:37:12 UTC</createdTime>
+<generatorID>22D75925-C2F6-1C59-F94D-FDC14E93EDE5</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_status" id="1E1DB0A9-19E6-B045-15C2-1073D0DCD512">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:37:12 UTC</createdTime>
+<generatorID>DF3BB8A8-9182-405E-3E42-429BA360E3AB</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="F3DF25EA-F147-435B-4AD9-DA215E8D6FF6">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:37:12 UTC</createdTime>
+<generatorID>E71248CF-7B7C-8849-B37F-9DDDB5D30322</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="811DC09E-15B8-7822-C2C6-8B4BF831D0EB" name="VDK_Status_PK">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-18 16:37:12 UTC</createdTime>
+<generatorID>6DEFD3AC-1D7D-FD4B-823D-C1F75360C221</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E602D053-C7E4-713B-59BE-8D82246CF22B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,652 @@
+DROP SEQUENCE VDK_Account_seq ; 
+create sequence VDK_Account_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Account_PK_trig 
+before insert on VDK_Account
+for each row 
+begin 
+select VDK_Account_seq.nextval into :new.account_id from dual; 
+end; 
+/
+alter table VDK_Account add created date ; 
+alter table VDK_Account add created_by VARCHAR2 (255) ; 
+alter table VDK_Account add row_version_number integer ; 
+alter table VDK_Account add updated date ; 
+alter table VDK_Account add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Account_AUD_trig 
+before insert or update on VDK_Account 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Approve_Order_seq ; 
+create sequence VDK_Approve_Order_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Approve_Order_PK_trig 
+before insert on VDK_Approve_Order
+for each row 
+begin 
+select VDK_Approve_Order_seq.nextval into :new.approve_id from dual; 
+end; 
+/
+alter table VDK_Approve_Order add created date ; 
+alter table VDK_Approve_Order add created_by VARCHAR2 (255) ; 
+alter table VDK_Approve_Order add row_version_number integer ; 
+alter table VDK_Approve_Order add updated date ; 
+alter table VDK_Approve_Order add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Approve_Order_AUD_trig 
+before insert or update on VDK_Approve_Order 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Complaint_seq ; 
+create sequence VDK_Complaint_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Complaint_PK_trig 
+before insert on VDK_Complaint
+for each row 
+begin 
+select VDK_Complaint_seq.nextval into :new.complaint_id from dual; 
+end; 
+/
+alter table VDK_Complaint add created date ; 
+alter table VDK_Complaint add created_by VARCHAR2 (255) ; 
+alter table VDK_Complaint add row_version_number integer ; 
+alter table VDK_Complaint add updated date ; 
+alter table VDK_Complaint add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Complaint_AUD_trig 
+before insert or update on VDK_Complaint 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Contact_seq ; 
+create sequence VDK_Contact_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Contact_PK_trig 
+before insert on VDK_Contact
+for each row 
+begin 
+select VDK_Contact_seq.nextval into :new.contact_id from dual; 
+end; 
+/
+alter table VDK_Contact add created date ; 
+alter table VDK_Contact add created_by VARCHAR2 (255) ; 
+alter table VDK_Contact add row_version_number integer ; 
+alter table VDK_Contact add updated date ; 
+alter table VDK_Contact add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Contact_AUD_trig 
+before insert or update on VDK_Contact 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Customer_seq ; 
+create sequence VDK_Customer_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Customer_PK_trig 
+before insert on VDK_Customer
+for each row 
+begin 
+select VDK_Customer_seq.nextval into :new.customer_id from dual; 
+end; 
+/
+alter table VDK_Customer add created date ; 
+alter table VDK_Customer add created_by VARCHAR2 (255) ; 
+alter table VDK_Customer add row_version_number integer ; 
+alter table VDK_Customer add updated date ; 
+alter table VDK_Customer add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Customer_AUD_trig 
+before insert or update on VDK_Customer 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Employee_seq ; 
+create sequence VDK_Employee_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Employee_PK_trig 
+before insert on VDK_Employee
+for each row 
+begin 
+select VDK_Employee_seq.nextval into :new.employee_id from dual; 
+end; 
+/
+alter table VDK_Employee add created date ; 
+alter table VDK_Employee add created_by VARCHAR2 (255) ; 
+alter table VDK_Employee add row_version_number integer ; 
+alter table VDK_Employee add updated date ; 
+alter table VDK_Employee add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Employee_AUD_trig 
+before insert or update on VDK_Employee 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_History_seq ; 
+create sequence VDK_History_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_History_PK_trig 
+before insert on VDK_History
+for each row 
+begin 
+select VDK_History_seq.nextval into :new.history_id from dual; 
+end; 
+/
+alter table VDK_History add created date ; 
+alter table VDK_History add created_by VARCHAR2 (255) ; 
+alter table VDK_History add row_version_number integer ; 
+alter table VDK_History add updated date ; 
+alter table VDK_History add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_History_AUD_trig 
+before insert or update on VDK_History 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Logo_seq ; 
+create sequence VDK_Logo_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Logo_PK_trig 
+before insert on VDK_Logo
+for each row 
+begin 
+select VDK_Logo_seq.nextval into :new.logo_id from dual; 
+end; 
+/
+alter table VDK_Logo add created date ; 
+alter table VDK_Logo add created_by VARCHAR2 (255) ; 
+alter table VDK_Logo add row_version_number integer ; 
+alter table VDK_Logo add updated date ; 
+alter table VDK_Logo add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Logo_AUD_trig 
+before insert or update on VDK_Logo 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Order_seq ; 
+create sequence VDK_Order_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Order_PK_trig 
+before insert on VDK_Order
+for each row 
+begin 
+select VDK_Order_seq.nextval into :new.order_id from dual; 
+end; 
+/
+alter table VDK_Order add created date ; 
+alter table VDK_Order add created_by VARCHAR2 (255) ; 
+alter table VDK_Order add row_version_number integer ; 
+alter table VDK_Order add updated date ; 
+alter table VDK_Order add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Order_AUD_trig 
+before insert or update on VDK_Order 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Order_Item_seq ; 
+create sequence VDK_Order_Item_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Order_Item_PK_trig 
+before insert on VDK_Order_Item
+for each row 
+begin 
+select VDK_Order_Item_seq.nextval into :new.order_item_id from dual; 
+end; 
+/
+alter table VDK_Order_Item add created date ; 
+alter table VDK_Order_Item add created_by VARCHAR2 (255) ; 
+alter table VDK_Order_Item add row_version_number integer ; 
+alter table VDK_Order_Item add updated date ; 
+alter table VDK_Order_Item add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Order_Item_AUD_trig 
+before insert or update on VDK_Order_Item 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Pattern_seq ; 
+create sequence VDK_Pattern_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Pattern_PK_trig 
+before insert on VDK_Pattern
+for each row 
+begin 
+select VDK_Pattern_seq.nextval into :new.pattern_id from dual; 
+end; 
+/
+alter table VDK_Pattern add created date ; 
+alter table VDK_Pattern add created_by VARCHAR2 (255) ; 
+alter table VDK_Pattern add row_version_number integer ; 
+alter table VDK_Pattern add updated date ; 
+alter table VDK_Pattern add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Pattern_AUD_trig 
+before insert or update on VDK_Pattern 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Shoe_seq ; 
+create sequence VDK_Shoe_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Shoe_PK_trig 
+before insert on VDK_Shoe
+for each row 
+begin 
+select VDK_Shoe_seq.nextval into :new.shoe_id from dual; 
+end; 
+/
+alter table VDK_Shoe add created date ; 
+alter table VDK_Shoe add created_by VARCHAR2 (255) ; 
+alter table VDK_Shoe add row_version_number integer ; 
+alter table VDK_Shoe add updated date ; 
+alter table VDK_Shoe add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Shoe_AUD_trig 
+before insert or update on VDK_Shoe 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Shoe_Pattern_seq ; 
+create sequence VDK_Shoe_Pattern_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Shoe_Pattern_PK_trig 
+before insert on VDK_Shoe_Pattern
+for each row 
+begin 
+select VDK_Shoe_Pattern_seq.nextval into :new.shoe_pattern_id from dual; 
+end; 
+/
+alter table VDK_Shoe_Pattern add created date ; 
+alter table VDK_Shoe_Pattern add created_by VARCHAR2 (255) ; 
+alter table VDK_Shoe_Pattern add row_version_number integer ; 
+alter table VDK_Shoe_Pattern add updated date ; 
+alter table VDK_Shoe_Pattern add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Shoe_Pattern_AUD_trig 
+before insert or update on VDK_Shoe_Pattern 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Status_seq ; 
+create sequence VDK_Status_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Status_PK_trig 
+before insert on VDK_Status
+for each row 
+begin 
+select VDK_Status_seq.nextval into :new.status from dual; 
+end; 
+/
+alter table VDK_Status add created date ; 
+alter table VDK_Status add created_by VARCHAR2 (255) ; 
+alter table VDK_Status add row_version_number integer ; 
+alter table VDK_Status add updated date ; 
+alter table VDK_Status add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Status_AUD_trig 
+before insert or update on VDK_Status 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE VDK_Wishlist_seq ; 
+create sequence VDK_Wishlist_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger VDK_Wishlist_PK_trig 
+before insert on VDK_Wishlist
+for each row 
+begin 
+select VDK_Wishlist_seq.nextval into :new.list_id from dual; 
+end; 
+/
+alter table VDK_Wishlist add created date ; 
+alter table VDK_Wishlist add created_by VARCHAR2 (255) ; 
+alter table VDK_Wishlist add row_version_number integer ; 
+alter table VDK_Wishlist add updated date ; 
+alter table VDK_Wishlist add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger VDK_Wishlist_AUD_trig 
+before insert or update on VDK_Wishlist 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP INDEX VDK_Customer_customer__FK_0 ;
+CREATE INDEX VDK_Customer_customer__FK_0 ON VDK_Account(VDK_Customer_customer_id) ;
+DROP INDEX VDK_Employee_employee__FK_1 ;
+CREATE INDEX VDK_Employee_employee__FK_1 ON VDK_Account(VDK_Employee_employee_id) ;
+DROP INDEX VDK_Employee_employee__FK_2 ;
+CREATE INDEX VDK_Employee_employee__FK_2 ON VDK_Approve_Order(VDK_Employee_employee_id) ;
+DROP INDEX VDK_Order_order_id_FK_3 ;
+CREATE INDEX VDK_Order_order_id_FK_3 ON VDK_Approve_Order(VDK_Order_order_id) ;
+DROP INDEX VDK_Customer_customer__FK_4 ;
+CREATE INDEX VDK_Customer_customer__FK_4 ON VDK_Complaint(VDK_Customer_customer_id) ;
+DROP INDEX VDK_Employee_employee__FK_5 ;
+CREATE INDEX VDK_Employee_employee__FK_5 ON VDK_Complaint(VDK_Employee_employee_id) ;
+DROP INDEX VDK_Order_order_id_FK_6 ;
+CREATE INDEX VDK_Order_order_id_FK_6 ON VDK_Complaint(VDK_Order_order_id) ;
+DROP INDEX VDK_Customer_customer__FK_7 ;
+CREATE INDEX VDK_Customer_customer__FK_7 ON VDK_Contact(VDK_Customer_customer_id) ;
+DROP INDEX VDK_Employee_employee__FK_8 ;
+CREATE INDEX VDK_Employee_employee__FK_8 ON VDK_Contact(VDK_Employee_employee_id) ;
+DROP INDEX VDK_Account_account_id_FK_9 ;
+CREATE INDEX VDK_Account_account_id_FK_9 ON VDK_Customer(VDK_Account_account_id) ;
+DROP INDEX VDK_Wishlist_list_id_FK_10 ;
+CREATE INDEX VDK_Wishlist_list_id_FK_10 ON VDK_Customer(VDK_Wishlist_list_id) ;
+DROP INDEX VDK_Account_account_id_FK_11 ;
+CREATE INDEX VDK_Account_account_id_FK_11 ON VDK_Employee(VDK_Account_account_id) ;
+DROP INDEX VDK_Employee_employee__FK_12 ;
+CREATE INDEX VDK_Employee_employee__FK_12 ON VDK_History(VDK_Employee_employee_id) ;
+DROP INDEX VDK_Order_order_id_FK_13 ;
+CREATE INDEX VDK_Order_order_id_FK_13 ON VDK_History(VDK_Order_order_id) ;
+DROP INDEX VDK_Status_status_FK_14 ;
+CREATE INDEX VDK_Status_status_FK_14 ON VDK_History(VDK_Status_status) ;
+DROP INDEX VDK_Shoe_shoe_id_FK_15 ;
+CREATE INDEX VDK_Shoe_shoe_id_FK_15 ON VDK_Logo(VDK_Shoe_shoe_id) ;
+DROP INDEX VDK_Order_order_id_FK_16 ;
+CREATE INDEX VDK_Order_order_id_FK_16 ON VDK_Order_Item(VDK_Order_order_id) ;
+DROP INDEX VDK_Shoe_shoe_id_FK_17 ;
+CREATE INDEX VDK_Shoe_shoe_id_FK_17 ON VDK_Order_Item(VDK_Shoe_shoe_id) ;
+DROP INDEX VDK_Complaint_complain_FK_18 ;
+CREATE INDEX VDK_Complaint_complain_FK_18 ON VDK_Order(VDK_Complaint_complaint_id) ;
+DROP INDEX VDK_Customer_customer__FK_19 ;
+CREATE INDEX VDK_Customer_customer__FK_19 ON VDK_Order(VDK_Customer_customer_id) ;
+DROP INDEX VDK_Status_status_FK_20 ;
+CREATE INDEX VDK_Status_status_FK_20 ON VDK_Order(VDK_Status_status) ;
+DROP INDEX VDK_Pattern_pattern_id_FK_21 ;
+CREATE INDEX VDK_Pattern_pattern_id_FK_21 ON VDK_Shoe_Pattern(VDK_Pattern_pattern_id) ;
+DROP INDEX VDK_Shoe_shoe_id_FK_22 ;
+CREATE INDEX VDK_Shoe_shoe_id_FK_22 ON VDK_Shoe_Pattern(VDK_Shoe_shoe_id) ;
+DROP INDEX VDK_Logo_logo_id_FK_23 ;
+CREATE INDEX VDK_Logo_logo_id_FK_23 ON VDK_Shoe(VDK_Logo_logo_id) ;
+DROP INDEX VDK_Wishlist_list_id_FK_24 ;
+CREATE INDEX VDK_Wishlist_list_id_FK_24 ON VDK_Shoe(VDK_Wishlist_list_id) ;
+DROP INDEX VDK_Customer_customer__FK_25 ;
+CREATE INDEX VDK_Customer_customer__FK_25 ON VDK_Wishlist(VDK_Customer_customer_id) ;

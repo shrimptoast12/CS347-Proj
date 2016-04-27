@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<MultidimensionalDesign class="oracle.dbtools.crest.model.design.multidimensional.MultidimensionalDesign" name="Multidimensional_1" id="7954F020-A91C-65A0-8F11-B9399899EA15" mainViewID="84DF794D-052B-53B6-816D-F3094E8EFBF6" boundModel="C6BA154A-F24E-E5E4-BCDC-C84E871F9958">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-22 20:32:49 UTC</createdTime>
+<ownerDesignName>Shoes</ownerDesignName>
+<shouldBeOpen>true</shouldBeOpen>
+</MultidimensionalDesign>

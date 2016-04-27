@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Deliver" directorySegmentName="seg_0" id="678353AC-92D1-ACCA-311E-FE45C772ECB5">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-28 20:34:59 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<sourcePk>E18DA65B-BA43-D7F5-8B64-E23674966D88</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>89BC686A-E6A6-A69D-9FF0-D8BF9056A49E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>885B818F-B8F6-CA33-9353-FBDC20AC51B8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

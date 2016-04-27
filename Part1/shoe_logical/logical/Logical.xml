@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="44D78D80-3DF1-269E-4AD1-A59285819AEE" mainViewID="8301FF73-82F9-36E1-E215-9C16B020E65A">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 22:58:07 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

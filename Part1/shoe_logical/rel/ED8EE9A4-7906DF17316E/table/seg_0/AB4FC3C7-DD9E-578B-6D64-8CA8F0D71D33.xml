@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB4FC3C7-DD9E-578B-6D64-8CA8F0D71D33" name="VDK_Shoe_Pattern">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>1FF23C44-7B9C-4B26-A96E-17DF5FD48B8B</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="shoe_pattern_id" id="B4BEC791-13AD-E192-8DD3-DDCF88B0E3DB">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>5CA8417A-312F-6AF9-153C-AF755380868C</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VDK_Shoe_shoe_id" id="5B77179B-C82C-8FA1-795F-E5EAB9A46D13">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>AFB48E66-C2BE-E404-4C15-222C8653A41A</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="76A0D98C-3767-AED5-E0E0-01177B711FF1" referredColumn="32EE8113-9E6B-6BC8-448F-CC4E515DFF1F"/>
+</associations>
+</Column>
+<Column name="VDK_Pattern_pattern_id" id="CDF752E2-F7A7-82D9-F482-D99D58A44F79">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>95AC3AB7-5ABD-D0D5-9287-7DEFB103EF44</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7819F7F6-F4D7-DEA1-2543-1F83E9FAC3B8" referredColumn="E3282589-DED1-E7A5-E1A0-724E6D756F7F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B551B16E-CDC8-F874-C379-A529084BED1F" name="VDK_Shoe_Pattern_PK">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>A1F7E496-E4A4-5154-B47A-9B8C5031AC11</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4BEC791-13AD-E192-8DD3-DDCF88B0E3DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="62DC7D79-88EB-21F4-79C3-526CDB0B7136" name="VDK_Shoe_Pattern_VDK_Shoe_FK">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>EFD7765F-A987-FCB4-9F03-44FB9F45B798</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B77179B-C82C-8FA1-795F-E5EAB9A46D13"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A7C26582-4100-6CB8-D241-E1A21EE23367" name="VDK_Shoe_Pattern_VDK_Pattern_FK">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 23:25:04 UTC</createdTime>
+<generatorID>CF053087-C99A-B476-DD1A-FE10AC6A6177</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDF752E2-F7A7-82D9-F482-D99D58A44F79"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

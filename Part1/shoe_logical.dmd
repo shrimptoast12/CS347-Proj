@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="shoe_relational" id="336ADB47-F76A-B5E8-6D52-268154E0005A" version="3.5">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-27 22:58:07 UTC</createdTime>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>336ADB47-F76A-B5E8-6D52-268154E0005A</designId>
+</OSDM_Design>

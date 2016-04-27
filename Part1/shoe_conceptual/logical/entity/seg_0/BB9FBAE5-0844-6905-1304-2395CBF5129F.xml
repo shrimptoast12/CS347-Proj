@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BB9FBAE5-0844-6905-1304-2395CBF5129F" name="Order_Item">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 20:00:37 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Order_Item_id" id="6ED274A3-B04A-310C-DE62-225E9BF3FAD1">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 20:01:04 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_id" id="7C57B66B-F70E-4077-77FD-62F27991C0F7">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-28 20:36:00 UTC</createdTime>
+<generatorID>BA3D5942-710F-202D-A07E-9A8FFDBF66F7</generatorID>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<referedAttribute>20A1055A-AC03-7EA0-815A-260700635C8D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="shoe_id" id="FF3A2A82-686A-68B1-027B-3580C596F616">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-28 20:36:08 UTC</createdTime>
+<generatorID>AB9D65D6-E822-0301-7343-19C4342ADA26</generatorID>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<referedAttribute>7E05E835-4151-B281-477C-64B40AAD48E6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6B955457-85CC-5C2B-57B9-5F099DA970F2" name="Order_Item PK">
+<createdBy>viet</createdBy>
+<createdTime>2016-03-23 20:41:27 UTC</createdTime>
+<ownerDesignName>shoe_conceptual</ownerDesignName>
+<engineerTo>
+<item key="BAED1A8D-05CE-8C5B-DC86-2DC172F6D22C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6ED274A3-B04A-310C-DE62-225E9BF3FAD1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

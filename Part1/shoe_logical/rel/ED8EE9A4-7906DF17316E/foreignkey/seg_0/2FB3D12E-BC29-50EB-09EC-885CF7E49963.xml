@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2FB3D12E-BC29-50EB-09EC-885CF7E49963" containerWithKeyObject="634F8984-D47B-C1D2-FD9E-5C344AE08F38" localFKIndex="78E5BB34-1E1B-B6BB-E7AA-AD8772FE96BF" name="VDK_Complaint_VDK_Order_FK">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-27 18:39:27 UTC</createdTime>
+<generatorID>99EBBA0B-770B-E7FA-1992-55299791FC75</generatorID>
+<ownerDesignName>shoe_logical</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>34D9906A-3C4E-EC8B-6989-6CD2A0974BB4</referredTableID>
+<keyObject>49D3D621-4568-045A-1D05-D75ECE51F908</keyObject>
+<referredKeyID>49D3D621-4568-045A-1D05-D75ECE51F908</referredKeyID>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

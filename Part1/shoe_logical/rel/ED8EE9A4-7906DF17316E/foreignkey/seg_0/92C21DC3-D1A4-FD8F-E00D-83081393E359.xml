@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="92C21DC3-D1A4-FD8F-E00D-83081393E359" containerWithKeyObject="8B2CD74F-6A7F-4110-0BF3-3F7B5D5F6216" localFKIndex="D5ECA256-E22E-A792-0693-8A995F5CE318" name="VDK_Customer_VDK_Wishlist_FK">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-22 02:39:22 UTC</createdTime>
+<generatorID>3D6D8BD3-ECCC-DE5B-5FF1-583140F2CBC8</generatorID>
+<ownerDesignName>shoe_relational</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0D945EC8-A923-F323-2896-630A01B1E5E4</referredTableID>
+<keyObject>AF2BC466-5B20-0AAF-F27A-05ACCE9889D5</keyObject>
+<referredKeyID>AF2BC466-5B20-0AAF-F27A-05ACCE9889D5</referredKeyID>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
