@@ -1,0 +1,160 @@
+# This example was cleaned up and made to work by Eliot Lyon in October, 2015
+
+connOracleNoSQL = connectTo 'OracleNoSQL' 'WDBC3' 'localhost:6011' 'native_mode' 'A0' nodebug
+
+SIM on connOracleNoSQL "CLEAR DATABASE"
+
+# Organization Schema
+#Employee
+SIM on connOracleNoSQL '''CLASS SIM_Employee 
+(
+    employee-id : INTEGER, REQUIRED;
+    name : STRING;
+    email-address : STRING;
+    address : STRING;
+    phone_number "Phone number (optional)" : STRING;
+    job : STRING;
+    type : STRING;
+    account :SIM_Account, MV, INVERSE IS employee;
+    order :SIM_Order, MV, INVERSE IS employee;
+);'''
+# Persons with person-id 1 to 5 created
+
+#Finally person-id 1 to 9 People
+
+#Delivery Admin
+SIM on connOracleNoSQL '''SUBCLASS SIM_Delivery-Admin "Current employees of the company" OF SIM_Employee
+(
+    customer :SIM_Customer, MV, INVERSE IS delivery-admin;
+    order :SIM_Order, MV, INVERSE IS delivery-admin;
+    account :SIM_Account, MV, INVERSE IS delivery-admin;
+);'''
+# Person with person-id 1, 2, and 5 made employee
+
+# Finally person-id 1, 2, 3, 5, 6 , 7 and 8 are Employee
+
+# Customer Support
+SIM on connOracleNoSQL '''SUBCLASS SIM_Customer_Support "Employees who are project team members" OF SIM_Employee
+(
+    customer :SIM_Customer, MV, INVERSE IS customer-support;
+    order :SIM_Order, MV, INVERSE IS customer-support;
+    account :SIM_Account, MV, INVERSE IS customer-support;
+    complaint :SIM_Complaint, MV, INVERSE IS customer-support;
+);'''
+# Person with Person-id 1, 2, 5, 6 and 7 made Project-Employee
+
+# Finally person-id 1, 2, 3, 6 and 7 are Project-Employee
+
+#Manager
+SIM on connOracleNoSQL '''SUBCLASS SIM_Manager "Managers of the company" OF SIM_Employee
+(
+    customer :SIM_Customer, MV, INVERSE IS manager;
+    order :SIM_Order, MV, INVERSE IS manager;
+    account :SIM_Account, MV, INVERSE IS manager;
+    complaint :SIM_Complaint, MV, INVERSE IS manager;
+);'''
+# Persons with person-id 8 created and made Employee and Manager
+
+# Finally person-id 1 , 7 and 8 are Project-Employee
+
+# Account
+SIM on connOracleNoSQL '''CLASS SIM_Account
+(
+    account-id : INTEGER, REQUIRED;
+    username : STRING;
+    customer :SIM_Customer, MV, INVERSE IS account;
+    employee :SIM_Employee, MV, INVERSE IS account;
+    delivery-admin :SIM_Delivery-Admin, MV, INVERSE IS account;
+    customer-support :SIM_Customer-Support, MV, INVERSE IS account;
+    manager :SIM_Manager, MV, INVERSE IS account;
+);'''
+
+
+# Customer
+SIM on connOracleNoSQL '''CLASS SIM_Customer
+(
+    customer-id : INTEGER, REQUIRED;
+    name : STRING;
+    email-address : STRING;
+    address : STRING;
+    credit-card-num : STRING;
+    phone_number "Phone number (optional)" : STRING;
+    account :SIM_Account, MV, INVERSE IS customer;
+    delivery-admin :SIM_Delivery-Admin, MV, INVERSE IS customer;
+    customer-support :SIM_Customer-Support, MV, INVERSE IS customer;
+    manager :SIM_Manager, MV, INVERSE IS customer;
+    employee :SIM_Employee, MV, INVERSE IS customer;
+    order :SIM_Order, MV, INVERSE IS customer;
+    complaint :SIM_Complaint, MV, INVERSE IS customer;
+);'''
+
+
+# Order
+SIM on connOracleNoSQL '''CLASS SIM_Order
+(
+    order-id : INTEGER, REQUIRED;
+    date-ordered : STRING;
+    ship-date : STRING;
+    status : STRING;
+    customer :SIM_Customer, MV, INVERSE IS order;
+    employee :SIM_Employee, MV, INVERSE IS order;
+    delivery-admin :SIM_Delivery-Admin, MV, INVERSE IS order;
+    customer-support :SIM_Customer-Support, MV, INVERSE IS order;
+    manager :SIM_Manager, MV, INVERSE IS order;
+    complaint :SIM_Complaint, MV, INVERSE IS order;
+    order-item :SIM_Order-Item, MV, INVERSE IS order;
+);'''
+
+
+#Order_Item
+SIM on connOracleNoSQL '''CLASS SIM_Order-Item
+(
+    order-item-id : INTEGER, REQUIRED;
+    order :SIM_Order, MV, INVERSE IS order-item;
+    shoe :SIM_Shoe, MV, INVERSE IS order-item;
+);'''
+
+
+# Shoe
+SIM on connOracleNoSQL '''CLASS SIM_Shoe
+(
+    shoe-id : INTEGER, REQUIRED;
+    size : INTEGER;
+    color : STRING;
+    style : STRING;
+    price : STRING;
+    shoelace-color : STRING;
+    order-item :SIM_Order-Item, MV, INVERSE IS shoe;
+    pattern :SIM_Pattern, MV, INVERSE IS shoe;
+    logo :SIM_Logo, MV, INVERSE IS shoe;
+);'''
+
+#Pattern
+SIM on connOracleNoSQL '''CLASS SIM_Pattern
+(
+    pattern-id : INTEGER, REQUIRED;
+    pattern-name : STRING;
+    pattern-look : STRING;
+    shoe :SIM_Shoe, MV, INVERSE IS pattern;
+);'''
+
+#Logo
+SIM on connOracleNoSQL '''CLASS SIM_Logo
+(
+    logo-id : INTEGER, REQUIRED;
+    logo-style : STRING;
+    shoe :SIM_Shoe, MV, INVERSE IS logo;
+);'''
+
+#Complaint
+SIM on connOracleNoSQL '''CLASS SIM_Complaint
+(
+    complaint-id : INTEGER, REQUIRED;
+    comments : STRING;
+    customer-support :SIM_Customer-Support, MV, INVERSE IS complaint;
+    manager :SIM_Manager, MV, INVERSE IS complaint;
+    order :SIM_Order, MV, INVERSE IS complaint;
+    customer :SIM_Customer, MV, INVERSE IS complaint;
+);'''
+
+

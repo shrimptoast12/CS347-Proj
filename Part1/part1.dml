@@ -1,0 +1,14 @@
+--Example DML file
+--NOTE: we did not need a DML file, but here are some examples on how to create one if necessary
+
+truncate table VDK_Customer;
+
+truncate table VDK_Employee;
+
+
+alter trigger VDK_Approve_Order_PK_trig disable;
+
+alter table VDK_Employee disable constraint "VDK_ACCOUNT_ACCOUNT_FK"
+
+
+
