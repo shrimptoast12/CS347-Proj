@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1DFD308B-9F7C-5CC0-7B41-EB9888C457B0" name="SIM_Order_Item">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-27 21:00:58 UTC</createdTime>
+<ownerDesignName>Part2Conceptual</ownerDesignName>
+<engineerTo>
+<item key="34225D0E-082C-1148-C5BD-AAC5BE462A58" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Order_item_id" id="F67949B8-5542-8DCB-9AA7-97322751C1EF">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-27 21:01:14 UTC</createdTime>
+<ownerDesignName>Part2Conceptual</ownerDesignName>
+<engineerTo>
+<item key="34225D0E-082C-1148-C5BD-AAC5BE462A58" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_id" id="102178BA-38B2-1080-C6EF-B88C644A3DBF">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-27 22:40:45 UTC</createdTime>
+<generatorID>BFFE35E0-0696-4F90-CFAC-1D0C4674E7FC</generatorID>
+<ownerDesignName>Part2Conceptual</ownerDesignName>
+<engineerTo>
+<item key="34225D0E-082C-1148-C5BD-AAC5BE462A58" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>51AD8A62-DC24-C894-1485-DBBF14259175</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="shoe_id" id="7BC9102C-6B5D-A57C-A985-37BC91CF4B73">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-27 22:47:10 UTC</createdTime>
+<generatorID>75C5E5B0-3161-D3C7-BCD3-D9DAC130B955</generatorID>
+<ownerDesignName>Part2Conceptual</ownerDesignName>
+<engineerTo>
+<item key="34225D0E-082C-1148-C5BD-AAC5BE462A58" value="true"/>
+</engineerTo>
+<referedAttribute>3CDD98CB-6816-3586-B47F-D2CC80975BA2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AA1B07C7-30A9-7688-6083-88DE11278297" name="SIM_Order_Item PK">
+<createdBy>viet</createdBy>
+<createdTime>2016-04-27 21:01:33 UTC</createdTime>
+<ownerDesignName>Part2Conceptual</ownerDesignName>
+<engineerTo>
+<item key="34225D0E-082C-1148-C5BD-AAC5BE462A58" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F67949B8-5542-8DCB-9AA7-97322751C1EF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
